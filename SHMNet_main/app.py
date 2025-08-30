@@ -9,7 +9,7 @@ device = torch.device('cuda' if torch.cuda.is_available() else "cpu")
 
 try:
     model = SHMNet2_1(num_classes=6).to(device)
-    model.load_state_dict(torch.load('results/0/SHMNet2_1_train2_results/best_model.pth', map_location=device))
+    model.load_state_dict(torch.load('results/exp1/SHMNet2_1_train2_results/best_model.pth', map_location=device))
     model.eval()
     print("Model loaded successfully.")
 except Exception as e:
@@ -63,4 +63,5 @@ def static_files(path):
     return send_from_directory(app.root_path, path)
 
 if __name__ == '__main__':
+
     app.run(host='0.0.0.0', port=5000)
