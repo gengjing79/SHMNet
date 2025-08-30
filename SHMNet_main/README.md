@@ -47,29 +47,29 @@ data/
 
 ## Training
 ```bash
-python pre_train.py --model resnet50 --weights ResNet50_Weights.DEFAULT --results results/test
+python pre_train.py --model resnet50 --weights ResNet50_Weights.DEFAULT --results results/exp2
 ```
 ```bash
-python pre_train.py --model mobilenet_l --weights MobileNet_V3_Large_Weights.DEFAULT --results results/test
+python pre_train.py --model mobilenet_l --weights MobileNet_V3_Large_Weights.DEFAULT --results results/exp2
 ```
 ```bash
-python pre_train.py --model ef2s --weights EfficientNet_V2_L_Weights.DEFAULT --results results/test
+python pre_train.py --model ef2s --weights EfficientNet_V2_L_Weights.DEFAULT --results results/exp2
 ```
 ```bash
-python pre_train.py --model convnext_s --weights ConvNeXt_Small_Weights.DEFAULT --results results/test
+python pre_train.py --model convnext_s --weights ConvNeXt_Small_Weights.DEFAULT --results results/exp2
 ```
 ```bash
-python pre_train.py --model swin_s --weights Swin_S_Weights.DEFAULT --results results/test
+python pre_train.py --model swin_s --weights Swin_S_Weights.DEFAULT --results results/exp2
 ```
 Ours [SHMNet-sparse(swin+mobile)]:
 ```bash
-python SHMNet_sparse_train1.py --model SHMNet2_1 --results results/test 
-python SHMNet_sparse_train2.py --model SHMNet2_1 --weights results/test/SHMNet2_1_train1_results/best_model.pth --results results/test
+python SHMNet_sparse_train1.py --model SHMNet2_1 --results results/exp1 
+python SHMNet_sparse_train2.py --model SHMNet2_1 --weights results/exp1/SHMNet2_1_train1_results/best_model.pth --results results/exp1
 ```
 
 ## validation
 ```bash
-python val.py --model SHMNet2_1 --weights results/0/SHMNet2_1_train1_results/best_model.pth --results results/test
+python val.py --model SHMNet2_1 --weights results/0/SHMNet2_1_train1_results/best_model.pth --results results/val
 ```
 
 ## Prediction
