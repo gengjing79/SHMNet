@@ -1,4 +1,4 @@
-from PIL import Image
+1from PIL import Image
 import torch
 import os
 import torchvision.transforms as transforms
@@ -14,7 +14,7 @@ from models.SHMNet import SHMNet1_1, SHMNet1_2, SHMNet1_3, SHMNet2_1, SHMNet2_2,
 parser = argparse.ArgumentParser()
 parser.add_argument('--model', type=str, default=SHMNet2_1, help='select a model for validation')
 parser.add_argument('--path', type=str, default="data/images", help='image_path')
-parser.add_argument('--weights', type=str, default="results/0/SHMNet2_1_train2_results/best_model.pth")
+parser.add_argument('--weights', type=str, default="results/exp1/SHMNet2_1_train2_results/best_model.pth")
 parser.add_argument('--results_dir', type=str, default='results/test/predict.csv', help='results dir')
 opt = parser.parse_args()
 
@@ -83,5 +83,6 @@ for root, dirs, files in os.walk(root_folder_path):
 
             except Exception as e:
                 print(f"Error processing {filename}: {str(e)}")
+
 
 print(f"All results have been saved to {csv_file}")
