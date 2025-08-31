@@ -1,8 +1,0 @@
-model: swin_s
-weights: results/exp2/swin_s_train1_results/best_model.pth
-num_classes: 6
-batch_size: 32
-data_path: D:\artist6
-device: cuda
-results_dir: results/test
-seed: False
