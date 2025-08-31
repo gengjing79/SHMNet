@@ -1,0 +1,8 @@
+model: SHMNet2_1
+weights: results/exp1/SHMNet2_1_train1_results/best_model.pth
+num_classes: 6
+batch_size: 32
+data_path: D:\artist6
+device: cuda
+results_dir: results/0
+seed: False
